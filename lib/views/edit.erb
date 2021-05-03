@@ -1,0 +1,14 @@
+<a href="/">Page des potins</a>
+<h1>PAGE POTIN</h1>
+<h2>Voici la page du potin n°<%=params['id']%></h2>
+<p>
+  <p>Son auteur : <%= gossip.author %><br/> </p>
+   <p>Le contenu du potin : <%= gossip.content %></p>
+</p>
+
+<h2>modification</h2>
+<form action='/gossip/edit/<%=params['id']%>' method='POST'>
+      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+</form>
